@@ -1,0 +1,48 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-bottom: 2em ;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+#productos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#productos article{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#productos article div:first-child{
+    display: flex;
+}
+
+p{
+    margin-right: 15px;
+}
+
+#actualizar{
+    display: none;
+}

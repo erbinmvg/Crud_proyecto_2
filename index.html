@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+			crossorigin="anonymous"
+		/>
+    <link rel="stylesheet" href="./hoja_estilos.css">
+</head>
+
+<body>
+    <main>
+        <h1>Lista de Productos</h1>
+
+        <section class="formulario">
+            <form>
+                <div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="codigo-producto"
+                            name="codigo"
+                            placeholder="Código"
+                        />
+                    </div>
+                    <div class="col-4">
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="descripcion"
+                            name="descripcion"
+                            placeholder="Descripcion"
+                        />
+                    </div>
+                    <div class="col-2">
+                        <input
+                            class="form-control"
+                            type="text"
+                            id="precio"
+                            name="precio"
+                            placeholder="Precio ($)"
+                        />
+                    </div>
+                    <div class="col-2">
+                        <button  id="agregar" class="btn btn-primary">Actualizar</button>
+                        <button id="actualizar" class="btn btn-primary">Actualizar</button>
+                    </div>
+                </div>
+
+
+                <!--<label for="codigo-producto">Codigo</label>
+                <input type="text" name="codigo" id="codigo-producto">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" name="descripcion" id="descripcion">
+                <label for="precio">Descripción</label>
+                <input type="text" name="precio" id="precio">
+                <button id="agregar">Agregar</button>
+                <button id="actualizar">Actualizar</button>-->
+            </form>
+        </section>
+        <section id="productos">
+        </section>
+
+    </main>
+
+    <script src="./principal.js"></script>
+</body>
+
+</html>
