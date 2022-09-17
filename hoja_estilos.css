@@ -16,12 +16,12 @@ input{
 
 .formulario{
     display: flex;
-    justify-content: center;
+    justify-content:center;
     margin-bottom: 5em;
 }
 
 #productos{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ input{
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0 0.3);
 }
 
 #productos article div:first-child{

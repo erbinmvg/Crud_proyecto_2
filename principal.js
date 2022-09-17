@@ -16,14 +16,11 @@ function agregarProducto(e) {
   e.preventDefault()
 
   const producto = {
-    codigo: codigo.value, //este elemento es único
+    codigo: codigo.value, 
     descripcion: descripcion.value,
-    precio: precio.value
+    precio: precio.value,
   }
 
-  // if (producto que estoy creando ya existe en el array o algun input está vacío) {
-  //     mostrar un error
-  // }else {
 
   if (codigo.value>0){
         let pos = productos.findIndex(producto=> producto.codigo == codigo.value);
@@ -37,7 +34,7 @@ function agregarProducto(e) {
                   mostrarProductos()
                   limpiarInput()
             }else{
-                  alert('Comp precio solo se aceptan valores numéricos, y no puede quedar en 0')
+                  alert('Como precio solo se aceptan valores numéricos, y no puede quedar en 0')
             }  
             
         }
@@ -94,6 +91,7 @@ function mostrarProductos() {
                 <div class=col-4>
                     <td>${producto.precio}</td>
                 </div>
+               
                 <div>
                     <button onclick="editarProducto(this, '${producto.codigo}' )" class="btn btn-outline-warning">Editar</button>
                     <button onclick="eliminarProducto(this, '${producto.codigo}' )" class="btn btn-outline-danger">Borrar</button>
@@ -110,39 +108,34 @@ function guardarEnLS() {
 
 function actualizarProducto(evento) {
   evento.preventDefault()
-  // leer los datos del input
   let codigoProducto = codigo.value
   let nuevoDescripcion = descripcion.value
   let nuevaPrecio = precio.value
 
-  // editar el obtejo dentro del array que tenga el identificar
   productos = productos.map((producto) => {
     if (producto.codigo === codigoProducto) {
       return {
         codigo: codigoProducto,
         descripcion: nuevoDescripcion,
-        precio: nuevaPrecio
+        precio: nuevaPrecio,
       }
     } else {
       return producto
     }
   })
 
-  // limpiar los input
+ 
   limpiarInput()
 
-  // vuelve a aparecer boton agregar
   botonAgregar.style.display = 'block'
-  // vuelva a desaparecer el boton actualizar
+ 
   botonActualizar.style.display = 'none'
-  // vuelve a quedar activo el input
+  
   codigo.removeAttribute('disabled')
-  // actualizo el LS
+  
   guardarEnLS()
-  // actualizar la tabla
+
   mostrarProductos()
 }
 
 leerProductos()
-
-// ctrl + alt + }x2
